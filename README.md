@@ -54,7 +54,7 @@ Tested with Python 3.10 on a single GPU.
 
 ```bash
 git clone <this-repo>
-cd vjepa-assignment
+cd <this-repo>
 conda create -n vjepa python=3.10 -y
 conda activate vjepa
 pip install torch transformers av numpy pandas scikit-learn scipy matplotlib tqdm
