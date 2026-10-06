@@ -1,6 +1,6 @@
 # Interpreting Physics in V-JEPA
 
-An interpretability study of how a frozen **V-JEPA 2** video encoder (ViT-L, `facebook/vjepa2-vitl-fpc64-256`) represents three physical properties of simple moving objects: **direction**, **speed**, and **acceleration**.
+An interpretability study of how a frozen **V-JEPA 2** [3] video encoder (ViT-L, `facebook/vjepa2-vitl-fpc64-256`) represents three physical properties of simple moving objects: **direction**, **speed**, and **acceleration**.
 
 - **Part 1** reproduces the main experimental progression of *Interpreting Physics in Video World Models* [1]: layer-wise probing, iterative nullspace probing, and multi-probe subspace steering.
 - **Part 2** extends it with the manifold (spline) steering of *Manifold Steering Reveals the Shared Geometry of Neural Network Representation and Behavior* [2], and compares it with linear (chord) and multi-probe steering.
@@ -184,6 +184,8 @@ python scripts/12_manifold_plots.py
 
 [2] Wurgaft, D., Rager, C., Kowal, M., Shyam, V., Feucht, S., Bhalla, U., Haklay, T., Bigelow, E., Sarfati, R., McGrath, T., Lewis, O., Merullo, J., Goodman, N. D., Fel, T., Geiger, A., & Lubana, E. S. (2026). Manifold steering reveals the shared geometry of neural network representation and behavior. *arXiv preprint arXiv:2605.05115*.
 
+[3] Assran, M., Bardes, A., Fan, D., Garrido, Q., Howes, R., Komeili, M., Muckley, M., Rizvi, A., Roberts, C., Sinha, K., Zholus, A., Arnaud, S., Gejji, A., Martin, A., Robert Hogan, F., Dugas, D., Bojanowski, P., Khalidov, V., Labatut, P., Massa, F., Szafraniec, M., Krishnakumar, K., Li, Y., Ma, X., Chandar, S., Meier, F., LeCun, Y., Rabbat, M., & Ballas, N. (2025). V-JEPA 2: Self-supervised video models enable understanding, prediction and planning. *arXiv preprint arXiv:2506.09985*.
+
 ```bibtex
 @article{joseph2026interpreting,
   title={Interpreting Physics in Video World Models},
@@ -198,8 +200,15 @@ python scripts/12_manifold_plots.py
   journal={arXiv preprint arXiv:2605.05115},
   year={2026}
 }
+
+@article{assran2025vjepa2,
+  title={V-JEPA~2: Self-Supervised Video Models Enable Understanding, Prediction and Planning},
+  author={Assran, Mahmoud and Bardes, Adrien and Fan, David and Garrido, Quentin and Howes, Russell and Komeili, Mojtaba and Muckley, Matthew and Rizvi, Ammar and Roberts, Claire and Sinha, Koustuv and Zholus, Artem and Arnaud, Sergio and Gejji, Abha and Martin, Ada and Robert Hogan, Francois and Dugas, Daniel and Bojanowski, Piotr and Khalidov, Vasil and Labatut, Patrick and Massa, Francisco and Szafraniec, Marc and Krishnakumar, Kapil and Li, Yong and Ma, Xiaodong and Chandar, Sarath and Meier, Franziska and LeCun, Yann and Rabbat, Michael and Ballas, Nicolas},
+  journal={arXiv preprint arXiv:2506.09985},
+  year={2025}
+}
 ```
 
 ## Acknowledgement
 
-This work uses the pretrained [V-JEPA 2](https://huggingface.co/facebook/vjepa2-vitl-fpc64-256) encoder via Hugging Face Transformers, and is built with [PyTorch](https://pytorch.org/), [scikit-learn](https://scikit-learn.org/), [SciPy](https://scipy.org/), and [Matplotlib](https://matplotlib.org/). We thank the authors of [1] and [2] for the methods this project reproduces and extends.
+This work uses the pretrained [V-JEPA 2](https://huggingface.co/facebook/vjepa2-vitl-fpc64-256) [3] encoder via Hugging Face Transformers, and is built with [PyTorch](https://pytorch.org/), [scikit-learn](https://scikit-learn.org/), [SciPy](https://scipy.org/), and [Matplotlib](https://matplotlib.org/). We thank the authors of [1], [2], and [3] for the methods and model this project builds on.
